@@ -83,5 +83,4 @@ document.addEventListener('DOMContentLoaded', function () {
       navbarMenu.classList.toggle('hidden');
     });
   }
-
 });
