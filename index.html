@@ -109,69 +109,45 @@
     </svg>
   </button>
 
-  <nav class="navbar fixed top-0 w-full glass shadow-md border-b border-yellow/10 transition-all duration-300 z-40">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#hero" class="navbar__logo hover:scale-105 transition-transform flex items-center" aria-label="Navigasi ke halaman utama OSKUY">
-        <img src="images/Logo.png" alt="Logo merek OSKUY" width="55" height="55" class="mr-2 hover:scale-105 transition-transform" />
-        <span class="text-2xl font-bold">
-          <span class="text-primary">OS</span>
-          <span class="text-yellow">KUY</span>
-        </span>
-      </a>
-      <ul class="navbar__menu hidden md:flex space-x-8 list-none">
-        <li><a href="#hero" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Beranda
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#about" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Tentang Kami
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#services" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Layanan
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#pricing" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Harga
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#portfolio" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Portofolio
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#blog" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Blog
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#testimonials" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Testimoni
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#faq" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          FAQ
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-        <li><a href="#contact" class="navbar__link text-primary hover:text-yellow transition-all duration-300 font-medium relative group" role="menuitem">
-          Kontak
-          <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
-        </a></li>
-      </ul>
-      <div class="flex items-center space-x-4">
-        <button class="navbar__darkmode-toggle bg-yellow text-primary p-2 rounded-full hover:scale-105 transition-all duration-300" aria-label="Toggle tema mode gelap" aria-pressed="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <button class="navbar__toggle md:hidden bg-yellow text-primary p-2 rounded hover:scale-105 transition-transform" aria-label="Toggle menu navigasi mobile">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+<nav class="navbar fixed top-0 w-full glass shadow-md border-b border-yellow/10 transition-all duration-300 z-40">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+     <a href="#hero" class="navbar__logo hover:scale-105 transition-transform flex items-center" aria-label="Navigasi ke halaman utama OSKUY">
+       <img src="images/Logo.png" alt="Logo merek OSKUY" width="55" height="55" class="mr-2 hover:scale-105 transition-transform" />
+       <span class="text-2xl font-bold">
+         <span class="text-primary">OS</span>
+         <span class="text-yellow">KUY</span>
+       </span>
+     </a>
+     
+     <ul class="navbar__menu hidden absolute top-full left-0 w-full bg-white shadow-lg p-5 space-y-3 
+                md:relative md:flex md:space-y-0 md:space-x-8 md:w-auto md:bg-transparent md:shadow-none md:p-0">
+       <li><a href="#hero" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Beranda</a></li>
+       <li><a href="#about" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Tentang Kami</a></li>
+       <li><a href="#services" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Layanan</a></li>
+       <li><a href="#pricing" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Harga</a></li>
+       <li><a href="#portfolio" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Portofolio</a></li>
+       <li><a href="#blog" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Blog</a></li>
+       <li><a href="#testimonials" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Testimoni</a></li>
+       <li><a href="#faq" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">FAQ</a></li>
+       <li><a href="#contact" class="navbar__link block text-primary hover:text-yellow transition-all duration-300 font-medium" role="menuitem">Kontak</a></li>
+     </ul>
+
+     <div class="flex items-center space-x-4">
+       <button class="navbar__darkmode-toggle bg-yellow text-primary p-2 rounded-full hover:scale-105 transition-all duration-300" aria-label="Toggle tema mode gelap" aria-pressed="false">
+         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+         </svg>
+       </button>
+       <button class="navbar__toggle md:hidden bg-yellow text-primary p-2 rounded hover:scale-105 transition-transform" aria-label="Toggle menu navigasi mobile">
+         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+           <line x1="3" y1="12" x2="21" y2="12"></line>
+           <line x1="3" y1="6" x2="21" y2="6"></line>
+           <line x1="3" y1="18" x2="21" y2="18"></line>
+         </svg>
+       </button>
+     </div>
+   </div>
+ </nav>
 
   <section id="hero" class="min-h-screen flex items-center justify-center gradient-bg pt-24 pb-20 px-4 relative overflow-hidden">
     <div class="floating-shapes"></div>

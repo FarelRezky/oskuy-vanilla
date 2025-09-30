@@ -67,3 +67,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+// Menunggu seluruh konten halaman HTML dimuat
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Ambil elemen tombol hamburger dan menu navigasi
+  const navbarToggle = document.querySelector('.navbar__toggle');
+  const navbarMenu = document.querySelector('.navbar__menu');
+
+  // Cek apakah kedua elemen ditemukan
+  if (navbarToggle && navbarMenu) {
+    // Tambahkan event listener 'click' pada tombol hamburger
+    navbarToggle.addEventListener('click', function () {
+      // Toggle (tampilkan/sembunyikan) class 'hidden' pada menu navigasi
+      navbarMenu.classList.toggle('hidden');
+    });
+  }
+
+});
