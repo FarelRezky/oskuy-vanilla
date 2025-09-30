@@ -1,0 +1,285 @@
+    :root {
+      --bg-primary: #F5F7FB;
+      --bg-secondary: #FFFFFF;
+      --bg-tertiary: #1F2A44;
+      --text-primary: #1F2A44;
+      --text-secondary: #6B7280;
+      --text-accent: #FFFFFF;
+      --border-color: rgba(255, 183, 3, 0.2);
+      --glass-bg: rgba(255, 255, 255, 0.95);
+      --glass-border: rgba(255, 183, 3, 0.2);
+      /* Section-specific background colors */
+      --bg-home: #E0F2FE;
+      --bg-about: #E8F5E8;
+      --bg-services: #FFF8E1;
+      --bg-pricing: #F3E5F5;
+      --bg-portfolio: #FCE4EC;
+      --bg-testimonials: #FFF3E0;
+      --bg-faq: #E0F7FA;
+      --bg-blog: #FFEBEE;
+    }
+
+    .dark {
+      --bg-primary: #0F172A;
+      --bg-secondary: #1E293B;
+      --bg-tertiary: #1F2A44;
+      --text-primary: #FFFFFF;
+      --text-secondary: #CBD5E1;
+      --text-accent: #1F2A44;
+      --border-color: rgba(255, 183, 3, 0.3);
+      --glass-bg: rgba(30, 41, 59, 0.95);
+      --glass-border: rgba(255, 183, 3, 0.3);
+    }
+
+    .gradient-bg {
+      background: linear-gradient(-45deg, #1F2A44, #2a3a5c, #FFB703, #1F2A44);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    .glass {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 183, 3, 0.2);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(31, 42, 68, 0.25);
+    }
+
+    .typing-text {
+      overflow: hidden;
+      border-right: 2px solid #FFB703;
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
+    }
+
+    .parallax {
+      transform: translateZ(0);
+      will-change: transform;
+    }
+
+    .floating-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .floating-shapes::before,
+    .floating-shapes::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(45deg, rgba(31, 42, 68, 0.1), rgba(255, 183, 3, 0.1));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-shapes::before {
+      width: 300px;
+      height: 300px;
+      top: -150px;
+      left: -150px;
+      animation-delay: -2s;
+    }
+
+    .floating-shapes::after {
+      width: 200px;
+      height: 200px;
+      bottom: -100px;
+      right: -100px;
+      animation-delay: -4s;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 183, 3, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .service-card:hover::before {
+      left: 100%;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 247, 251, 0.9) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 183, 3, 0.2);
+    }
+
+    .interactive-button {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .interactive-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.6s;
+      z-index: -1;
+    }
+
+    .interactive-button:hover::before {
+      left: 100%;
+    }
+
+    .stats-counter {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFB703;
+    }
+
+    .navbar-scroll {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, #FFB703, #1F2A44);
+      z-index: 9999;
+      transition: width 0.25s ease-out;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Dark mode overrides for better text visibility */
+    .dark .text-gray-400 {
+      color: #94A3B8 !important;
+    }
+
+    .dark .text-gray-500 {
+      color: #94A3B8 !important;
+    }
+
+    .dark .text-gray-600 {
+      color: #CBD5E1 !important;
+    }
+
+    .dark .text-gray-700 {
+      color: #CBD5E1 !important;
+    }
+
+    .dark .text-gray-800 {
+      color: #E2E8F0 !important;
+    }
+
+    .dark .text-gray-300 {
+      color: #CBD5E1 !important;
+    }
+
+    .dark .text-gray-200 {
+      color: #E2E8F0 !important;
+    }
+
+    /* Dark mode background overrides */
+    .dark .bg-lightgray {
+      background-color: #1E293B !important;
+    }
+
+    .dark .bg-white {
+      background-color: #1E293B !important;
+    }
+
+    .dark .glass {
+      background: var(--glass-bg) !important;
+    }
+
+    .dark .testimonial-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(245, 247, 251, 0.05) 100%) !important;
+    }
+
+    /* Dark mode override for OS text in logo */
+    .dark .navbar__logo .text-primary {
+      color: #FFFFFF !important;
+    }
+
+    /* Dark mode override for navbar menu links */
+    .dark .navbar__link {
+      color: #FFFFFF !important;
+    }
+
+    /* Dark mode override for stats numbers to be white */
+    .dark .stats-counter {
+      color: white !important;
+    }
+
+    .dark .counter {
+      color: white !important;
+    }
+
+    /* Dark mode blue text overrides for visibility */
+    .dark .text-blue-50 { color: #DBEAFE !important; }
+    .dark .text-blue-100 { color: #BFDBFE !important; }
+    .dark .text-blue-200 { color: #93C5FD !important; }
+    .dark .text-blue-300 { color: #60A5FA !important; }
+    .dark .text-blue-400 { color: #60A5FA !important; }
+    .dark .text-blue-500 { color: #2563EB !important; }
+    .dark .text-blue-600 { color: #1D4ED8 !important; }
+    .dark .text-blue-700 { color: #1E40AF !important; }
+    .dark .text-blue-800 { color: #1E3A8A !important; }
+    .dark .text-blue-900 { color: #1E3A8A !important; }
+
+    /* Dark mode override for pricing card price text */
+    .dark .pricing__card .text-gray-600 {
+      color: white !important;
+    }
+    .dark .pricing__card .text-primary {
+      color: white !important;
+    }
+
+    /* Dark mode override for stats section plus and percent signs */
+.dark .stats__item div {
+  color: white;
+}
+
+/* Dark mode overrides for Get In Touch links */
+.dark .get-in-touch-link {
+  color: white !important;
+}
+
+.dark .get-in-touch-link:hover {
+  color: white !important;
+}
+
+/* Dark mode overrides for footer links */
+.dark .footer-link {
+  color: white !important;
+}
+
+.dark .footer-link:hover {
+  color: #FFB703 !important;
+}
+
+.dark .icon-black svg {
+  stroke: #000 !important;
+}
