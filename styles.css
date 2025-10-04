@@ -8,6 +8,7 @@
       --border-color: rgba(255, 183, 3, 0.2);
       --glass-bg: rgba(255, 255, 255, 0.95);
       --glass-border: rgba(255, 183, 3, 0.2);
+      --bg-input: #E5E7EB; /* Abu-abu muda untuk input di light mode */
       /* Section-specific background colors */
       --bg-home: #E0F2FE;
       --bg-about: #E8F5E8;
@@ -17,6 +18,7 @@
       --bg-testimonials: #FFF3E0;
       --bg-faq: #E0F7FA;
       --bg-blog: #FFEBEE;
+      --accent: #FFB703; /* Warna kuning untuk aksen */
     }
 
     .dark {
@@ -26,6 +28,7 @@
       --text-primary: #FFFFFF;
       --text-secondary: #CBD5E1;
       --text-accent: #1F2A44;
+        --bg-input: rgba(0, 0, 0, 0.2); /* Hitam transparan untuk input di dark mode */
       --border-color: rgba(255, 183, 3, 0.3);
       --glass-bg: rgba(30, 41, 59, 0.95);
       --glass-border: rgba(255, 183, 3, 0.3);
@@ -282,4 +285,44 @@
 
 .dark .icon-black svg {
   stroke: #000 !important;
+}
+
+/* Tambahkan ini di styles.css */
+
+.contact-social-link {
+  /* Menggunakan variabel untuk teks di background gelap */
+  color: var(--text-primary); 
+  transition: color 0.3s ease;
+}
+
+.contact-social-link:hover {
+  /* Menggunakan variabel untuk warna kuning (accent) saat di-hover */
+  color: var(--accent);
+}
+
+/* Tambahkan class ini untuk placeholder dinamis */
+.placeholder-dynamic::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Perbaikan untuk FAQ */
+.faq-question:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+html.dark .faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  /* INI KECEPATAN MEMBUKA (atur lebih lambat) */
+  transition: max-height 0.1s ease;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  /* INI KECEPATAN MENUTUP (atur lebih cepat) */
+  transition: max-height 0.7s ease;
 }

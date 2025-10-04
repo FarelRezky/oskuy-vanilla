@@ -41,31 +41,28 @@
     });
 
     // Menunggu seluruh konten halaman HTML dimuat sebelum menjalankan skrip
-document.addEventListener('DOMContentLoaded', function () {
+// --- FUNGSI FAQ ACCORDION (LEBIH OPTIMAL) ---
+const faqItems = document.querySelectorAll('.faq-item');
 
-  // Ambil semua elemen pertanyaan FAQ
-  const faqQuestions = document.querySelectorAll('.faq-question');
+faqItems.forEach(currentItem => {
+  const button = currentItem.querySelector('.faq-question');
+  const answer = currentItem.querySelector('.faq-answer');
+  const icon = button.querySelector('svg');
 
-  // Loop (ulangi) untuk setiap elemen pertanyaan yang ditemukan
-  faqQuestions.forEach(button => {
-    // Tambahkan "pendengar" untuk event 'click' pada setiap tombol
-    button.addEventListener('click', () => {
-      // Cari elemen jawaban (.faq-answer) yang berada tepat setelah tombol ini
-      const answer = button.nextElementSibling;
-      
-      // Cari ikon panah di dalam tombol
-      const icon = button.querySelector('svg');
+  button.addEventListener('click', () => {
+    // Cari item lain yang sedang terbuka
+    const currentlyOpenItem = document.querySelector('.faq-answer.open');
 
-      // Toggle (nyalakan/matikan) class 'hidden' pada elemen jawaban
-      // Jika class 'hidden' ada, maka akan dihapus (jawaban muncul)
-      // Jika tidak ada, maka akan ditambahkan (jawaban tersembunyi)
-      answer.classList.toggle('hidden');
+    // Jika ada item lain yang terbuka, tutup item tersebut
+    if (currentlyOpenItem && currentlyOpenItem !== answer) {
+      currentlyOpenItem.classList.remove('open');
+      currentlyOpenItem.parentElement.querySelector('svg').classList.remove('rotate-180');
+    }
 
-      // Toggle class untuk memutar ikon panah sebagai feedback visual
-      icon.classList.toggle('rotate-180');
-    });
+    // Sekarang, buka atau tutup item yang diklik
+    answer.classList.toggle('open');
+    icon.classList.toggle('rotate-180');
   });
-
 });
 
 // Menunggu seluruh konten halaman HTML dimuat
